@@ -45,5 +45,7 @@ R: Lo podrán encontrar en detalle en el archivo Prueba_clustering_motores.py. P
 **7. Es escalable tu solución ¿Que dificultades tuvo el modelamiento? ¿Como harías escalable tu solución?**
 
 R: Gran parte de la respuesta a esta pregunta la podrán encontrar en la pregunta n°5. Brevemente, considero que los resultados son parcialmente escalables debido al tamaño de la muestra de motores. Sin embargo, dado a que no existe información respecto a los modelos muestreados y si todos sus motores se comportan de la misma forma (aún cuando tengan los mismos sensores), es necesario considerar ello. Así, propongo dos formas para aumentar la escalabilidad:
+
 a) Evaluar el número de datos por marca y modelo, de forma de balancear el número de ser necesario.
+
 b) Aumentar el número de datos considerando marca y modelo, utilizando data histórica (si está disponible) o continuar evaluando motores, para aumentar aún más los atributos y con ello optimizar el modelo.
