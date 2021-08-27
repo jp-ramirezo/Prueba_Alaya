@@ -34,8 +34,10 @@ R: Considero que tres algoritmos aportarían a estender esto: K-means, DBSCAN y 
 
 **4. Es factible el deep learning para descubrir estos estados**
 
-5. Es escalable la solución para todos los motores? o debes hacer el análisis por motor?
+**5. Es escalable la solución para todos los motores? o debes hacer el análisis por motor?**
 
-6. Escribe el código
+**6. Escribe el código**
 
-7. Es escalable tu solución ¿Que dificultades tuvo el modelamiento? ¿Como harías escalable tu solución?
+R: Lo podrán encontrar en detalle en el archivo Prueba_clustering_motores.py. Para una mejor experiencia, invito a Uds a utilizar Jupyter Lab o Notebook para poder apreciar de forma más interactiva los gráficos generados y el flujo de trabajo realizado.
+
+**7. Es escalable tu solución ¿Que dificultades tuvo el modelamiento? ¿Como harías escalable tu solución?**
