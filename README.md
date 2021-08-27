@@ -24,7 +24,7 @@ Si bien ello, es necesario aclarar que esta es una inferencia basada en los dato
 
 R: Dado a que la función de todo sensor es medir, naturalmente asumí que el parámetro involucrado per-sé puede cambiar. Sin embargo, es necesario indicar que el "no cambio" también es un parámetro de control importante para validar que los componentes internos que deben funcionar de una determinada forma, lo siga haciendo siempre. Esta es una variable control, la que es requerida para asegurar la validez de las condiciones deñ estudio y medición.
 
-En este sentido, para encontrar estos estados haría una inspección del datasheet del motor y vería la composición de sensores para conocer sus rangos estándar. Luego, mediante software de control de calidad, vería el flujo potenciométrico de dichos sensores y, a partir del grado de lejanía del estándar, me aproximaría a un estado. Finalmente, **contrataría mis apreciaciones con las de una persona entendida en motores**, que evalúe empíricamente su estado y vería el nivel de coincidencias.
+En este sentido, para encontrar estos estados haría una inspección del datasheet del motor y vería la composición de sensores para conocer sus rangos estándar. Luego, mediante software de control de calidad, vería el flujo potenciométrico de dichos sensores y, a partir del grado de lejanía del estándar, me aproximaría a un estado. Finalmente, **contrastaría mis apreciaciones con las de una persona entendida en motores**, que evalúe empíricamente su estado y vería el nivel de coincidencias.
 
 Considero importante agregar que todos los sensores aportan información, tanto los que empíricamente cambian (como los sensores de oxígeno de los gases de escape) y los que debiesen ser constante (como los sensores de rpm). En ambos casos trabajaría con ellos como criterio para clasificar.
 
@@ -44,4 +44,6 @@ R: Lo podrán encontrar en detalle en el archivo Prueba_clustering_motores.py. P
 
 **7. Es escalable tu solución ¿Que dificultades tuvo el modelamiento? ¿Como harías escalable tu solución?**
 
-R: Gran parte de la respuesta a esta pregunta la podrán encontrar en la pregunta n°5. 
+R: Gran parte de la respuesta a esta pregunta la podrán encontrar en la pregunta n°5. Brevemente, considero que los resultados son parcialmente escalables debido al tamaño de la muestra de motores. Sin embargo, dado a que no existe información respecto a los modelos muestreados y si todos sus motores se comportan de la misma forma (aún cuando tengan los mismos sensores), es necesario considerar ello. Así, propongo dos formas para aumentar la escalabilidad:
+a) Evaluar el número de datos por marca y modelo, de forma de balancear el número de ser necesario.
+b) Aumentar el número de datos considerando marca y modelo, utilizando data histórica (si está disponible) o continuar evaluando motores, para aumentar aún más los atributos y con ello optimizar el modelo.
