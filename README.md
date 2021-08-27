@@ -30,14 +30,18 @@ Considero importante agregar que todos los sensores aportan información, tanto 
 
 **3. Que tipo de algoritmos no supervisados se adaptan a este problema**
 
-R: Considero que tres algoritmos aportarían a estender esto: K-means, DBSCAN y las Gaussian Mixtures. Si bien todas las mencionadas establecen una distancia geométrica del centroide con cada uno de los datos, la manera geométrica es diferencial: las dos primeras lo hacen de manera circular, mientras que la tecera lo hace de forma no circular. Esto puede ser clave para datos cuyo posicionamiento no siga una distribución circular. En este desafío se realizó un ensayo preliminar con K-means y, a través del gráfico de inercia, se pudo determinar que la minimización de este parámetro se alcanzó con un número de conglomerados similar al número de estados descritos por el ejercicio, lo cual me hace suponer un posible modelamiento. Si pudiera continuar con este desafío, contrastaría los conglomerados obtenidos con Gaussian Mixture para establecer si existe una mejor adecuación.
+R: Considero que tres algoritmos aportarían a estender esto: K-means, DBSCAN y las Gaussian Mixtures. Si bien todas las mencionadas establecen una distancia geométrica del centroide con cada uno de los datos, la manera geométrica es diferencial: las dos primeras lo hacen de manera circular, mientras que la tercera lo hace de forma no circular. Esto puede ser clave para datos cuyo posicionamiento no siga una distribución circular. En este desafío se realizó un ensayo preliminar con K-means y, a través del gráfico de inercia, se pudo determinar que la minimización de este parámetro se alcanzó con un número de conglomerados similar al número de estados descritos por el ejercicio, lo cual me hace suponer un posible modelamiento. Si pudiera continuar con este desafío, contrastaría los conglomerados obtenidos con Gaussian Mixture para establecer si existe una mejor adecuación.
 
 **4. Es factible el deep learning para descubrir estos estados**
 
 **5. Es escalable la solución para todos los motores? o debes hacer el análisis por motor?**
+
+R: El presente modelo y todos los que se pueden elaborar, naturalmente consideran las características de cada unidad para establecer patrones. Por lo mismo, naturalmente cada modelo supervisado o no supervisado revisa dato por dato para tratar de establecer aspectos comunes que permitan realizar una regresión o clasificación. Para el caso actual, hay una escalabilidad natural basada en los 20631 motores clasificados (por cada motor, 3 calibraciones y 21 sensores). Sin embargo, también existen factores a considerar como los modelos y las marcas: cada uno posee una cierta tecnología que perfectamente puede cambiar entre cada tipo de auto y manufacturador. En el presente set de datos, no es posible establecer si todos los motores testeados pertenecen a diferentes modelos y marcas, pudiendo existir algún tipo de sesgo natural: 20361 motores y autos es algo que una sola marca puede producir en un periodo de tiempo. Por lo mismo, para evaluar concretamente la escalibilidad, es necesario conocer las condiciones del muestreo (representatividad de marcas y modelos), la evaluación del mecánico (el tipo de estado). De no haber un cierto balance, se requiere un remuestreo o un oversampling para poder mejorar el desempeño de los modelos.
 
 **6. Escribe el código**
 
 R: Lo podrán encontrar en detalle en el archivo Prueba_clustering_motores.py. Para una mejor experiencia, invito a Uds a utilizar Jupyter Lab o Notebook para poder apreciar de forma más interactiva los gráficos generados y el flujo de trabajo realizado.
 
 **7. Es escalable tu solución ¿Que dificultades tuvo el modelamiento? ¿Como harías escalable tu solución?**
+
+R: Gran parte de la respuesta a esta pregunta la podrán encontrar en la pregunta n°5. 
